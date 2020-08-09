@@ -22,7 +22,8 @@ module.exports = {
             if (userExist) res.status(400).json({message: 'Email taken'})
             else {const newUser = new User(body);
             const user = await newUser.save();
-            res.status(201).json(user);}          
+            res.status(201).json(user);}
+                 
         } catch (error) {
             res.satus(400).json(error)
         }

@@ -3,5 +3,5 @@ const BlogController = require('./BlogController')
 
 module.exports = { 
     UserController,
-    BlogController,
+    BlogController
 }
