@@ -1,7 +1,7 @@
 const UserValidator = require('./UserValidators')
-const BlogValidator = require('./BlogValidators')
+const ScheduleValidator = require('./ScheduleValidators')
 
 module.exports = {
     UserValidator,
-    BlogValidator,
+    ScheduleValidator,
 }

@@ -1,7 +1,7 @@
 const User = require('./User')
-const Blog = require('./Blog')
+const Schedule = require('./Schedule')
 
 module.exports = {
     User,
-    Blog
+    Schedule
 }

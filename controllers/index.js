@@ -1,7 +1,7 @@
 const UserController = require('./UserController')
-const BlogController = require('./BlogController')
+const ScheduleController = require('./ScheduleController')
 
 module.exports = { 
     UserController,
-    BlogController
+    ScheduleController
 }

@@ -3,27 +3,27 @@ const mongoose = require('mongoose');
 const { Schema } = mongoose;
 
 
-const blogSchema = new Schema({
+const scheduleSchema = new Schema({
     is_active:{
         type: Boolean,
         default: true
-    },
-    title:{
-        type: String,
-        required: true
-    },
-    text:{
-        type: String,
-        required: true
     },
     date:{
         type: Date,
         required: true
     },
-    author:{
+    time:{
         type: String,
         required: true
-    }
+    },
+    note:{
+        type: String,
+        required: true
+    },
+    user: [{
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'User',
+      }]
 },
    {
     timestamps: true,
@@ -33,6 +33,6 @@ const blogSchema = new Schema({
 
 
 
-const Blog = mongoose.model('Blog', blogSchema);
+const Schedule = mongoose.model('Schedule', scheduleSchema);
 
-module.exports = Blog
+module.exports = Schedule

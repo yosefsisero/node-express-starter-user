@@ -15,19 +15,6 @@ module.exports = {
             .then((resDB) => res.status(200).json(resDB))
             .catch((Error)=> console.log(Error)) 
     },
-    create: async (req, res)=>{
-        const { body } = req;
-        try {
-            const userExist = await UserService.findOneByEmail(body.email)
-            if (userExist) res.status(400).json({message: 'Email taken'})
-            else {const newUser = new User(body);
-            const user = await newUser.save();
-            res.status(201).json(user);}
-                 
-        } catch (error) {
-            res.satus(400).json(error)
-        }
-    },
     signup: async (req, res)=>{
         const { body } = req;
         try {

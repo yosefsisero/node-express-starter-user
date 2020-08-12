@@ -8,8 +8,6 @@ const { verifyToken } = require('../middlewares')
 router.get('/users', verifyToken, UserController.findAll)
 router.get('/users/:id', UserController.findOne)
 
-router.post('/users', UserValidator.create, UserController.create)
-
 router.patch('/users/:id', UserValidator.change, UserController.change)
 
 router.delete('/users/:id', UserController.delete)
