@@ -18,7 +18,6 @@ module.exports = {
             tel: Joi.number(),
             country: Joi.string(),
             email: Joi.string(),
-            password: Joi.string(),
         }),
     }),
 };
